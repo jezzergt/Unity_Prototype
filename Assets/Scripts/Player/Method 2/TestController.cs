@@ -28,16 +28,15 @@ public class TestController: MonoBehaviour
     void Update()
     {
 
+        // Movement
         moveFB = Input.GetAxis("Vertical") * walkSpeed;
         animator.SetFloat("Walk_Forward", moveFB);
 
         moveLR = Input.GetAxis("Horizontal") * walkSpeed;
-
-        
         animator.SetFloat("Walk_Right", moveLR);
         
         
-
+        // Rotation
         rotX = Input.GetAxis("Mouse X") * sensitivity;
         rotY -= Input.GetAxis("Mouse Y") * sensitivity;
 
